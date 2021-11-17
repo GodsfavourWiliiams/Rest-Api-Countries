@@ -4,32 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <title>Rest Apis</title>
 </head>
 
-<body class="container">
-    <div class="header z-10">
-        <nav class="nav h-16 flex justify-between align-center w-full m-auto">
-            <div>
-                <h3>Where in the World?</h3>
+<body class="body">
+    <nav class="nav shadow-md">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex items-center justify-center sm:items-stretch sm:justify-start">
+                    <h3>Where in the World?</h3>
+                </div>
+                <div class="ml-3 relative">
+                    <div class="flex" id="nav-menu">
+                        <i class="fas fa-moon mt-1"></i>
+                        <p class="dark border-0 bg-none cursor-pointer">Darkmode</p>
+                    </div>
+                </div>
             </div>
-            <div class="flex" id="nav-menu">
-                <i class="dark-mode mt-4 ml-3 absolute fas fa-search"></i>
-                <p class="dark border-0 bg-none cursor-pointer">Darkmode</p>
-            </div>
-        </nav>
+        </div>
+    </nav>
+    <div class="inputField max-w-7xl mx-auto mt-16 mb-24 flex w-full justify-between">
+        <i class="fas fa-search absolute mt-5 ml-2"></i>
+        <input type="search" name="" id="input" class="input w-96 shadow-lg outline-none border-0 rounded py-4 px-8" placeholder="Search for a Country">
+        <select aria-placeholder="" id="select" class="select appearancenone w-96 shadow-lg outline-none border-0 py-4 px-8 rounded">
+            <option disabled selected class="">Filter by Region</option>
+            <option class="africa">Africa</option>
+            <option class="">America</option>
+            <option class="">Asia</option>
+            <option class="">Europe</option>
+            <option class="">Oceania</option>
+          </select>
     </div>
-
-    <div class="inputField flex w-full justify-between">
-        <img src="/images/search-solid.svg" alt="" width="18px" class="search-icon absolute">
-        <input type="search" name="" id="input" class="w-full outline-none border-0 rounded" placeholder="Search for a Country">
-        <input type="text" name="" id="">
-    </div>
-
-    <div class="output grid grid-cols-4 gap-24 m-auto" ">
+    <div class="output container mx-auto max-w-7xl grid grid-cols-1 sm:grid-cols-2 sm:gap-10 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-24">
     </div>
 </body>
 <script src="script.js "></script>
